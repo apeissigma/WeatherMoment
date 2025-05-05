@@ -73,7 +73,7 @@ namespace WeatherMoment
             TemperatureMin = weather.TemperatureMin;
             TemperatureMax = weather.TemperatureMax;
             WindSpeed = weather.WindSpeed;
-            Humidity = weather.Humidity; 
+            Humidity = weather.Humidity;
 
             weather.SetUp();
             SetDateTime();

@@ -11,13 +11,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using static WeatherMoment.Utility;
+using static System.Environment;
+using System.IO;
 
 namespace WeatherMoment
 {
     public class Weather
     {
+
+        //private string EnvironmentPath = System.Environment.GetEnvironmentVariable("API_KEY", EnvironmentVariableTarget.Machine).ToString(;
+
         private string fileName;
-        private string APIKey = "33964207c8ae53059558d376b9e00c63";
+        private string APIKey;
         public int Zip = 60618;
 
         #region Weather
@@ -43,8 +48,11 @@ namespace WeatherMoment
         public int Humidity = 0;
         #endregion
 
+
         public void SetUp()
         {
+            APIKey = LoadEnv(); 
+
             fileName = $"https://api.openweathermap.org/data/2.5/weather?zip={Zip},us&mode=xml&units=imperial&appid={APIKey}";
             XDocument xdoc = XDocument.Load(fileName);
 
@@ -120,6 +128,20 @@ namespace WeatherMoment
                     Humidity = h;
                 }
             }
+        }
+
+        private string LoadEnv()
+        {
+            foreach (var line in File.ReadAllLines("secret.env"))
+            {
+                var parts = line.Split('=', 2);
+                if (parts.Length == 2)
+                {
+                    Environment.SetEnvironmentVariable(parts[0], parts[1]);
+                }
+            }
+
+            return Environment.GetEnvironmentVariable("API_KEY");
         }
     }
 }
