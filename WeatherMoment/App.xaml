@@ -1,0 +1,9 @@
+﻿<Application x:Class="WeatherMoment.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WeatherMoment"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <FontFamily x:Key="Geist">./fonts/Geist.ttf#Geist</FontFamily>
+    </Application.Resources>
+</Application>

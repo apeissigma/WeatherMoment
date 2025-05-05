@@ -1,0 +1,232 @@
+﻿<Page x:Class="WeatherMoment.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WeatherMoment"
+      mc:Ignorable="d" 
+      d:DesignHeight="540" d:DesignWidth="700"
+      Title="MainPage">
+
+
+
+    <Grid x:Name="MainGrid" Loaded="MainGrid_Loaded" Background="{Binding Path=BackgroundColor}">
+
+
+
+
+
+        <!-- City -->
+        <TextBlock x:Name="City" 
+                   Text="{Binding City}" 
+                   Foreground="{Binding Path=ForegroundColor}"
+                   HorizontalAlignment="Left" 
+                   VerticalAlignment="Top" 
+                   Margin="16,24,0,0" 
+                   FontFamily="Geist" 
+                   FontWeight="Bold"
+                   FontSize="16" 
+                   Width="260" 
+                   Height="24" />
+        <TextBlock x:Name="DateAndTime"
+                   Text="{Binding Path=DateAndTime}" 
+                   Foreground="{Binding Path=ForegroundColor}"
+                   HorizontalAlignment="Left" 
+                   VerticalAlignment="Top" 
+                   Margin="16,48,0,0" 
+                   FontFamily="Geist" 
+                   FontWeight="Regular"
+                   FontSize="16" 
+                   Width="260" 
+                   Height="24" />
+
+        <!-- Temp -->
+        <WrapPanel
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top"
+            Margin="12,72,0,0" 
+            Width="500"
+            Height="Auto">
+            <TextBlock x:Name="Temperature" 
+                       Text="{Binding Path=Temperature}" 
+                       Foreground="{Binding Path=ForegroundColor}"
+                       HorizontalAlignment="Left" 
+                       VerticalAlignment="Top"
+                       TextWrapping="Wrap" 
+                       FontFamily="Geist" 
+                       FontWeight="SemiBold"
+                       FontSize="206" 
+                       Width="Auto" 
+                       Height="221" />
+            <TextBlock x:Name="Degree"
+                       Text="°F"
+                       Foreground="{Binding Path=ForegroundColor}"
+                       HorizontalAlignment="Left" 
+                       VerticalAlignment="Center"
+                       TextWrapping="Wrap" 
+                       FontFamily="Geist" 
+                       FontWeight="SemiBold"
+                       FontSize="96" 
+                       Width="100" 
+                       Height="160" />
+        </WrapPanel>
+
+
+        <!-- Condition -->
+        <TextBlock x:Name="Condition" 
+                   Text="{Binding Path=Condition}" 
+                   Foreground="{Binding Path=ForegroundColor}"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top" 
+                   Margin="20,300,0,0" 
+                   FontFamily="Geist" 
+                   FontWeight="Medium"
+                   FontSize="40" 
+                   Width="400" 
+                   Height="48" 
+                   Canvas.ZIndex="2"/>
+
+
+        <!-- Temp min/max -->
+        <TextBlock x:Name="TemperatureMax" 
+                   Text="{Binding Path=TemperatureMax, StringFormat={}{0}°F}"
+                   Foreground="{Binding Path=ForegroundColor}"
+                   Margin="51,409,0,0"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top" 
+                   FontFamily="Geist" 
+                   FontWeight="Medium"
+                   FontSize="20" 
+                   Width="80" 
+                   Height="28" />
+        <TextBlock x:Name="TemperatureMin" 
+                   Text="{Binding Path=TemperatureMin, StringFormat={}{0}°F}"
+                   Foreground="{Binding Path=ForegroundColor}"
+                   Margin="51,451,0,0"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top" 
+                   FontFamily="Geist" 
+                   FontWeight="Medium"
+                   FontSize="20" 
+                   Width="80" 
+                   Height="28" />
+
+        <!-- Wind -->
+        <TextBlock x:Name="WindSpeed" 
+                   Text="{Binding Path=WindSpeed, StringFormat={}{0}mph}"
+                   Foreground="{Binding Path=ForegroundColor}"
+                   Margin="168,409,0,0" 
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top" 
+                   FontFamily="Geist" 
+                   FontWeight="Medium"
+                   FontSize="20" 
+                   Width="80" 
+                   Height="28" />
+
+
+        <!-- Humidity -->
+        <TextBlock x:Name="Humidity" 
+                   Text="{Binding Path=Humidity, StringFormat={}{0}%}"
+                   Foreground="{Binding Path=ForegroundColor}"
+                   Margin="168,451,0,0" 
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top" 
+                   FontFamily="Geist" 
+                   FontWeight="Medium"
+                   FontSize="20" 
+                   Width="80" 
+                   Height="28"/>
+
+
+        <!-- Image -->
+        <Image x:Name="weatherImage" 
+               Margin="305,102,0,0" 
+               HorizontalAlignment="Right" 
+               VerticalAlignment="Bottom" 
+               Height="385" 
+               Width="385" 
+                
+               Stretch="Fill"        
+               Canvas.ZIndex="1">
+        </Image>
+
+
+        <!-- Icons -->
+        <Path x:Name="HighIcon" 
+              Data="M205.66,117.66a8,8,0,0,1-11.32,0L136,59.31V216a8,8,0,0,1-16,0V59.31L61.66,117.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0l72,72A8,8,0,0,1,205.66,117.66Z"
+              Margin="20,413,0,0" 
+              HorizontalAlignment="Left"
+              VerticalAlignment="Top" 
+              Stretch="Fill"
+              Height="20"
+              Width="18"
+              Fill="{Binding Path=ForegroundColor}"/>
+
+        <Path x:Name="LowIcon" 
+              Data="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"
+              Margin="20,453,0,0" 
+              HorizontalAlignment="Left"
+              VerticalAlignment="Top" 
+              Stretch="Fill"
+              Height="20"
+              Width="18"
+              Fill="{Binding Path=ForegroundColor}"/>
+
+        <Path x:Name="WindIcon" 
+              Data="M184,184a32,32,0,0,1-32,32c-13.7,0-26.95-8.93-31.5-21.22a8,8,0,0,1,15-5.56C137.74,195.27,145,200,152,200a16,16,0,0,0,0-32H40a8,8,0,0,1,0-16H152A32,32,0,0,1,184,184Zm-64-80a32,32,0,0,0,0-64c-13.7,0-26.95,8.93-31.5,21.22a8,8,0,0,0,15,5.56C105.74,60.73,113,56,120,56a16,16,0,0,1,0,32H24a8,8,0,0,0,0,16Zm88-32c-13.7,0-26.95,8.93-31.5,21.22a8,8,0,0,0,15,5.56C193.74,92.73,201,88,208,88a16,16,0,0,1,0,32H32a8,8,0,0,0,0,16H208a32,32,0,0,0,0-64Z"
+              Margin="136,414,0,0" 
+              HorizontalAlignment="Left"
+              VerticalAlignment="Top" 
+              Stretch="Fill"
+              Height="18"
+              Width="22"
+              Fill="{Binding Path=ForegroundColor}"/>
+
+        <Path x:Name="HumidityIcon" 
+              Data="M174,47.75a254.19,254.19,0,0,0-41.45-38.3,8,8,0,0,0-9.18,0A254.19,254.19,0,0,0,82,47.75C54.51,79.32,40,112.6,40,144a88,88,0,0,0,176,0C216,112.6,201.49,79.32,174,47.75ZM128,216a72.08,72.08,0,0,1-72-72c0-57.23,55.47-105,72-118,16.53,13,72,60.75,72,118A72.08,72.08,0,0,1,128,216Z"
+              Margin="139,453,0,0" 
+              HorizontalAlignment="Left"
+              VerticalAlignment="Top" 
+              Stretch="Fill"
+              Height="20"
+              Width="16"
+              Fill="{Binding Path=ForegroundColor}"/>
+
+
+        <!-- Buttons -->
+        <Button x:Name="RefreshButton" 
+                Click="RefreshButton_Click"
+                Margin="0,24,76,0" 
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top" 
+                Width="32"
+                Height="32"
+                Background="Transparent" 
+                BorderBrush="Transparent">
+            <Viewbox Width="28" Height="28">
+                <Path 
+                    Data="M240,56v48a8,8,0,0,1-8,8H184a8,8,0,0,1,0-16H211.4L184.81,71.64l-.25-.24a80,80,0,1,0-1.67,114.78,8,8,0,0,1,11,11.63A95.44,95.44,0,0,1,128,224h-1.32A96,96,0,1,1,195.75,60L224,85.8V56a8,8,0,1,1,16,0Z"
+                    Fill="{Binding Path=ForegroundColor}" />
+            </Viewbox>
+        </Button>
+
+        <Button x:Name="ChangeLocation" 
+                Click="ChangeLocation_Click"
+                Margin="0,24,24,0" 
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top" 
+                Width="32"
+                Height="32"
+                Background="Transparent" 
+                BorderBrush="Transparent">
+            <Viewbox Width="28" Height="28">
+                <Path 
+                    Data="M248,121.58a15.76,15.76,0,0,1-11.29,15l-.2.06-78,21.84-21.84,78-.06.2a15.77,15.77,0,0,1-15,11.29h-.3a15.77,15.77,0,0,1-15.07-10.67L41,61.41a1,1,0,0,1-.05-.16A16,16,0,0,1,61.25,40.9l.16.05,175.92,65.26A15.78,15.78,0,0,1,248,121.58Z"
+                    Fill="{Binding Path=ForegroundColor}" />
+            </Viewbox>
+        </Button>
+        
+
+    </Grid>
+</Page>
