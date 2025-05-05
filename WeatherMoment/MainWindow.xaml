@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WeatherMoment"
         mc:Ignorable="d"
-        Title="Gimme Weather!" Height="540" Width="700
+        Title="Weather Moment" Height="540" Width="700
         ">
     <Grid Loaded="Grid_Loaded">
         <Frame x:Name="NavFrame" NavigationUIVisibility="Hidden"></Frame>

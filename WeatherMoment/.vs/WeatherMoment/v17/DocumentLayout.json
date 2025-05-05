@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\apeis\\Desktop\\SCHOOL\\PROG201 - Programming II\\GitRepos\\WeatherMoment\\WeatherMoment\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9A65DB4E-68F6-47EC-87EC-C4C934BC7F8D}|WeatherMoment.csproj|c:\\users\\apeis\\desktop\\school\\prog201 - programming ii\\gitrepos\\weathermoment\\weathermoment\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9A65DB4E-68F6-47EC-87EC-C4C934BC7F8D}|WeatherMoment.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A65DB4E-68F6-47EC-87EC-C4C934BC7F8D}|WeatherMoment.csproj|c:\\users\\apeis\\desktop\\school\\prog201 - programming ii\\gitrepos\\weathermoment\\weathermoment\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A65DB4E-68F6-47EC-87EC-C4C934BC7F8D}|WeatherMoment.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9A65DB4E-68F6-47EC-87EC-C4C934BC7F8D}|WeatherMoment.csproj|c:\\users\\apeis\\desktop\\school\\prog201 - programming ii\\gitrepos\\weathermoment\\weathermoment\\weather.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9A65DB4E-68F6-47EC-87EC-C4C934BC7F8D}|WeatherMoment.csproj|solutionrelative:weather.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9A65DB4E-68F6-47EC-87EC-C4C934BC7F8D}|WeatherMoment.csproj|c:\\users\\apeis\\desktop\\school\\prog201 - programming ii\\gitrepos\\weathermoment\\weathermoment\\utility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9A65DB4E-68F6-47EC-87EC-C4C934BC7F8D}|WeatherMoment.csproj|solutionrelative:utility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A65DB4E-68F6-47EC-87EC-C4C934BC7F8D}|WeatherMoment.csproj|c:\\users\\apeis\\desktop\\school\\prog201 - programming ii\\gitrepos\\weathermoment\\weathermoment\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A65DB4E-68F6-47EC-87EC-C4C934BC7F8D}|WeatherMoment.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9A65DB4E-68F6-47EC-87EC-C4C934BC7F8D}|WeatherMoment.csproj|c:\\users\\apeis\\desktop\\school\\prog201 - programming ii\\gitrepos\\weathermoment\\weathermoment\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -34,11 +38,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 180,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Utility.cs",
               "DocumentMoniker": "C:\\Users\\apeis\\Desktop\\SCHOOL\\PROG201 - Programming II\\GitRepos\\WeatherMoment\\WeatherMoment\\Utility.cs",
               "RelativeDocumentMoniker": "Utility.cs",
@@ -47,21 +51,32 @@
               "ViewState": "AgIAABkAAAAAAAAAAAAQwBsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-28T04:02:14.739Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\apeis\\Desktop\\SCHOOL\\PROG201 - Programming II\\GitRepos\\WeatherMoment\\WeatherMoment\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\apeis\\Desktop\\SCHOOL\\PROG201 - Programming II\\GitRepos\\WeatherMoment\\WeatherMoment\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-27T19:19:31.053Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\apeis\\Desktop\\SCHOOL\\PROG201 - Programming II\\GitRepos\\WeatherMoment\\WeatherMoment\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "C:\\Users\\apeis\\Desktop\\SCHOOL\\PROG201 - Programming II\\GitRepos\\WeatherMoment\\WeatherMoment\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-05T21:10:57.722Z",
               "EditorCaption": ""
             },
             {
@@ -82,20 +97,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Weather.cs",
               "DocumentMoniker": "C:\\Users\\apeis\\Desktop\\SCHOOL\\PROG201 - Programming II\\GitRepos\\WeatherMoment\\WeatherMoment\\Weather.cs",
               "RelativeDocumentMoniker": "Weather.cs",
               "ToolTip": "C:\\Users\\apeis\\Desktop\\SCHOOL\\PROG201 - Programming II\\GitRepos\\WeatherMoment\\WeatherMoment\\Weather.cs",
               "RelativeToolTip": "Weather.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAwwDUAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAQwIAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T19:53:42.947Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MainPage.xaml",
               "DocumentMoniker": "C:\\Users\\apeis\\Desktop\\SCHOOL\\PROG201 - Programming II\\GitRepos\\WeatherMoment\\WeatherMoment\\MainPage.xaml",
               "RelativeDocumentMoniker": "MainPage.xaml",
@@ -106,7 +121,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ChangeLocation.xaml.cs",
               "DocumentMoniker": "C:\\Users\\apeis\\Desktop\\SCHOOL\\PROG201 - Programming II\\GitRepos\\WeatherMoment\\WeatherMoment\\ChangeLocation.xaml.cs",
               "RelativeDocumentMoniker": "ChangeLocation.xaml.cs",
@@ -118,7 +133,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MainPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\apeis\\Desktop\\SCHOOL\\PROG201 - Programming II\\GitRepos\\WeatherMoment\\WeatherMoment\\MainPage.xaml.cs",
               "RelativeDocumentMoniker": "MainPage.xaml.cs",
