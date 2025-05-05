@@ -18,6 +18,7 @@ using System.Windows.Media;
 using System.Windows.Navigation;
 using System.Xml.Linq;
 using static WeatherMoment.Utility;
+using static System.Environment;
 
 namespace WeatherMoment
 {

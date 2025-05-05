@@ -109,7 +109,7 @@ namespace WeatherMoment {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WeatherMoment;V1.0.0.0;component/changelocation.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WeatherMoment;component/changelocation.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ChangeLocation.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
