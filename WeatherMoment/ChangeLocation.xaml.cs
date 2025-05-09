@@ -1,4 +1,10 @@
-﻿using System;
+﻿/* 
+ * Credits:
+ * Dynamic data binding and passing references on navigation (25-37, 47-48)
+ * * Code assistance by Prof. Janell Baxter
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,19 +21,20 @@ using System.Windows.Shapes;
 
 namespace WeatherMoment
 {
-    /// <summary>
-    /// Interaction logic for ChangeLocation.xaml
-    /// </summary>
     public partial class ChangeLocation : Page
     {
-        Program program; 
+        MainWindow window = (MainWindow)Application.Current.MainWindow;
+        private MainPage _mainPage; 
 
-
-        public ChangeLocation(Program thisProgram)
+        public ChangeLocation()
         {
             InitializeComponent();
-            program = thisProgram;
-            DataContext = program; 
+            DataContext = window.program; 
+        }
+
+        public ChangeLocation(MainPage mainPage) : this()
+        {
+            _mainPage = mainPage; 
         }
 
         private void ConfirmButton_Click(object sender, RoutedEventArgs e)
@@ -37,7 +44,9 @@ namespace WeatherMoment
             {
                 if (i > 10000 && i < 99999 )
                 {
-                    program.Zip = i;
+                    window.program.Zip = i;
+                    window.DataContext = window.program;
+                    _mainPage.Start();  
                     NavigationService.GoBack();
                 }
                 else

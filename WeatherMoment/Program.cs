@@ -24,6 +24,10 @@ namespace WeatherMoment
 {
     public class Program : INotifyPropertyChanged
     {
+        Weather weather = new Weather();
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
         public enum ConditionType
         {
             clouds,
@@ -34,8 +38,6 @@ namespace WeatherMoment
             drizzle,
             thunderstorms
         }
-
-        Weather weather = new Weather();
 
         #region Weather
         public int Zip { get => weather.Zip; set { weather.Zip = value; OnPropertyChanged(nameof(weather.Zip)); } }
@@ -195,8 +197,6 @@ namespace WeatherMoment
             }
         }
 
-
-        public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string property)
         {
             if (PropertyChanged != null)

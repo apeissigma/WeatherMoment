@@ -1,4 +1,10 @@
-﻿using System;
+﻿/* 
+ * Credits:
+ * Dynamic data binding and passing references on navigation (54-57)
+ * * Code assistance by Prof. Janell Baxter
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,38 +23,33 @@ using static WeatherMoment.Utility;
 
 namespace WeatherMoment
 {
-    /// <summary>
-    /// Interaction logic for MainPage.xaml
-    /// </summary>
     public partial class MainPage : Page 
     {
         MainWindow window = (MainWindow)Application.Current.MainWindow;
-        Program program = new Program();
-
 
         public MainPage()
         {
             InitializeComponent();
         }
 
-        private void Start()
+        public void Start()
         {
-            program.Start(); 
+            window.program.Start(); 
             SetImage();
             SetColors(); 
-            DataContext = program;
+            DataContext = window.program;
         }
 
         private void SetImage()
         {
-            string source = program.GetConditionImage();
+            string source = window.program.GetConditionImage();
             weatherImage.Source = new BitmapImage(new Uri(source, UriKind.Relative));
         }
 
         private void SetColors()
         {
-            program.ForegroundColor = program.GetForegroundColor();
-            program.BackgroundColor = program.GetBackgroundColor(); 
+            window.program.ForegroundColor = window.program.GetForegroundColor();
+            window.program.BackgroundColor = window.program.GetBackgroundColor(); 
         }
 
         private void MainGrid_Loaded(object sender, RoutedEventArgs e)
@@ -58,13 +59,12 @@ namespace WeatherMoment
 
         private void ChangeLocation_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new ChangeLocation(program));
+            NavigationService.Navigate(new ChangeLocation(this));
         }
 
         private void RefreshButton_Click(object sender, RoutedEventArgs e)
         {
             Start(); 
         }
-
     }
 }

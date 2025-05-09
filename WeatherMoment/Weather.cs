@@ -1,7 +1,9 @@
 ﻿/*
  * Credits:
  * SetUp() LINQ API file loading (lines 47-124)
- * Built on in-class code by Janell Baxter
+ * * Built on in-class code by Janell Baxter
+ * Weather.cs: Storing API key in .env file (lines 130-142)
+ * * “Load .env Files in C# .NET” by Ricardo Mauro: https://rmauro.dev/read-env-file-in-csharp/
  */
 
 using System;
@@ -18,9 +20,6 @@ namespace WeatherMoment
 {
     public class Weather
     {
-
-        //private string EnvironmentPath = System.Environment.GetEnvironmentVariable("API_KEY", EnvironmentVariableTarget.Machine).ToString(;
-
         private string fileName;
         private string APIKey;
         public int Zip = 60618;
@@ -134,10 +133,10 @@ namespace WeatherMoment
         {
             foreach (var line in File.ReadAllLines("secret.env"))
             {
-                var parts = line.Split('=', 2);
-                if (parts.Length == 2)
+                var split = line.Split('=', 2);
+                if (split.Length == 2)
                 {
-                    Environment.SetEnvironmentVariable(parts[0], parts[1]);
+                    Environment.SetEnvironmentVariable(split[0], split[1]);
                 }
             }
 

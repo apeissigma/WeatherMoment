@@ -20,6 +20,7 @@ namespace WeatherMoment
     public static class Utility
     {
         public static System.Windows.Media.Color color; 
+        public static DateTime dt = DateTime.Now;
 
         public static int FloatToInt(float f)
         {
@@ -33,19 +34,16 @@ namespace WeatherMoment
 
         public static string GetDateString()
         {
-            DateTime dt = DateTime.Now;
             return $"{dt.ToString("MMMM")} {dt.Day.ToString()}";
         }
 
         public static string GetDayString()
         {
-            DateTime dt = DateTime.Now;
             return dt.DayOfWeek.ToString();
         }
 
         public static string GetTimeString()
         {
-            DateTime dt = DateTime.Now;
             string meridiem = "";
 
             int newHour;
@@ -80,7 +78,6 @@ namespace WeatherMoment
 
         public static int GetHour()
         {
-            DateTime dt = DateTime.Now;
             return dt.Hour;
         }
     }
